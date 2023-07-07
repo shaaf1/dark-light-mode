@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="contact.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 class="logo">Shaaf Sheikh</h1>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://www.fiverr.com/shaafsheikh/do-web-designing-using-html-and-css">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" >Submit</button>
+          </div>
+        </form>
+      </div>
+      <footer>
+        <div class="professional-line">
+          <p>&copy; 2023 Shaaf Sheikh. All rights reserved.
+          </p>
+
+          <div class="floating-button" id="theme-toggle">
+            <img src="sun-removebg-preview.png" alt="Light Mode">
+          </div>
+          <script>
+            const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', toggleTheme);
+
+function toggleTheme() {
+  body.classList.toggle('dark-mode');
+
+  if (body.classList.contains('dark-mode')) {
+    themeToggle.innerHTML = '<img src="moon.png" alt="Dark Mode">';
+    themeToggle.classList.add('fade-out');
+    setTimeout(() => {
+      themeToggle.classList.remove('fade-out');
+      themeToggle.classList.add('fade-in');
+    }, 200);
+  } else {
+    themeToggle.innerHTML = '<img src="sun-removebg-preview.png" alt="Light Mode">';
+    themeToggle.classList.add('fade-out');
+    setTimeout(() => {
+      themeToggle.classList.remove('fade-out');
+      themeToggle.classList.add('fade-in');
+    }, 200);
+  }
+}
+
+          </script>
+</body>          
+</html>
